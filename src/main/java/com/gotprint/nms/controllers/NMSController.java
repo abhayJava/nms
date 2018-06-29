@@ -72,7 +72,7 @@ public class NMSController
       }
    }
 
-   @RequestMapping(value = "/note/delete/{id}")
+   @RequestMapping(value = "/note/delete/{id}",method=RequestMethod.GET)
    public ResponseEntity<?> deleteNote(@PathVariable(value = "id") Long id)
    {
       noteRepository.deleteById(id);
